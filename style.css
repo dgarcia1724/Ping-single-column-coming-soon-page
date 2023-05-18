@@ -1,0 +1,238 @@
+:root {
+  --blue: hsl(223, 87%, 63%);
+  --paleBlue: hsl(223, 100%, 88%);
+  --lightRed: hsl(354, 100%, 66%);
+  --gray: hsl(0, 0%, 59%);
+  --veryDarkBlue: hsl(209, 33%, 12%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Libre Franklin", sans-serif;
+}
+
+body {
+  font-size: 2rem;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 8.1rem 3.6rem 3.7rem;
+  max-width: 50rem;
+  text-align: center;
+}
+
+.logo {
+  margin-bottom: 3.2rem;
+}
+
+.container > h1 {
+  margin-bottom: 1.5rem;
+
+  font-weight: 300;
+  font-size: 2.2rem;
+  line-height: 32px;
+  letter-spacing: 0;
+
+  color: var(--gray);
+}
+
+.container > h1 > span {
+  font-weight: 700;
+
+  color: var(--veryDarkBlue);
+}
+
+.container > p {
+  margin-bottom: 3.2rem;
+
+  font-weight: 300;
+  font-size: 1.2rem;
+  line-height: auto;
+  letter-spacing: 0;
+
+  color: var(--veryDarkBlue);
+}
+
+.inputAndBtn {
+  margin-bottom: 7.2rem;
+}
+
+input {
+  margin-bottom: 1rem;
+  width: 100%;
+  padding-top: 1rem;
+  padding-left: 3.2rem;
+  padding-bottom: 1rem;
+  border-radius: 28px;
+  border: 1px solid var(--paleBlue);
+}
+
+input::placeholder {
+  color: var(--paleBlue);
+}
+
+/********* Error *********/
+
+.borderRed {
+  border: 1px solid var(--lightRed);
+}
+
+.errorMessage {
+  display: none;
+  margin-top: -0.8rem;
+  margin-bottom: 2rem;
+
+  font-style: italic;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 20px;
+  letter-spacing: 0.13px;
+
+  color: var(--lightRed);
+}
+
+.inputAndBtn > button {
+  width: 100%;
+  padding-top: 1.2rem;
+  padding-bottom: 1.2rem;
+  border-radius: 28px;
+  border: none;
+
+  background-color: var(--blue);
+  color: white;
+
+  cursor: pointer;
+}
+
+.inputAndBtn > button:hover {
+  background-color: var(--paleBlue);
+}
+
+.mainImg {
+  margin-bottom: 12rem;
+  width: 100%;
+}
+
+/******* logos ********/
+
+.logos {
+  margin-bottom: 2.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.2rem;
+}
+
+.circle {
+  width: 3.1rem;
+  height: 3.1rem;
+  border-radius: 50px;
+  border: 1px solid var(--paleBlue);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+}
+
+.circle > i {
+  color: var(--blue);
+}
+
+.circle:hover {
+  background-color: var(--blue);
+  border: 1px solid var(--blue);
+}
+
+.circle:hover > i {
+  color: white;
+}
+
+/********* footer  ***********/
+footer > p {
+  font-weight: 300;
+  font-size: 1rem;
+  line-height: auto;
+  letter-spacing: 0;
+
+  color: var(--gray);
+}
+
+/******** Responsive  *********/
+@media (min-width: 1400px) {
+  .container {
+    padding: 8rem 40rem 4.9rem;
+    max-width: 140rem;
+  }
+
+  .container > h1 {
+    margin-bottom: 1.6rem;
+
+    font-size: 4.8rem;
+    line-height: 60px;
+  }
+
+  .container > p {
+    margin-bottom: 4rem;
+
+    font-size: 2rem;
+  }
+
+  .inputAndBtn {
+    margin-bottom: 9.4rem;
+    display: grid;
+    grid-template-columns: 42.1rem 20rem;
+    gap: 1.6rem;
+
+    position: relative;
+  }
+
+  input {
+    margin-bottom: 0;
+    width: 100%;
+    padding-top: 1.8rem;
+    padding-left: 3rem;
+    padding-bottom: 1.8rem;
+  }
+
+  /********* Error *********/
+
+  .errorMessage {
+    position: absolute;
+    top: 100%;
+    left: 3rem;
+
+    margin-top: 0.6rem;
+    margin-bottom: 0;
+
+    font-size: 1.2rem;
+  }
+
+  .inputAndBtn > button {
+    padding-top: 1.8rem;
+    padding-bottom: 1.8rem;
+  }
+
+  .mainImg {
+    margin-bottom: 7.2rem;
+  }
+
+  /******* logos ********/
+
+  .logos {
+    margin-bottom: 2.5rem;
+  }
+
+  /********* footer  ***********/
+  footer > p {
+    font-size: 1.2rem;
+  }
+}
